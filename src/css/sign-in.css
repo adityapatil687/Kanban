@@ -1,0 +1,7 @@
+/* styles.css */
+.centered-container {
+  height: calc(100vh - var(--navbar-height, 68px)); /* 56px is the default navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
