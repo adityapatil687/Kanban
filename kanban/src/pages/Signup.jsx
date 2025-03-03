@@ -65,50 +65,26 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col justify-center bg-gray-50 py-12 sm:px-6 lg:px-8">
+    <div className="flex min-h-screen flex-col justify-center bg-gray-50 dark:bg-gray-900 py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center">
-          <UserPlus className="h-12 w-12 text-indigo-600" />
+          <UserPlus className="h-12 w-12 text-indigo-600 dark:text-indigo-400" />
         </div>
-        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900 dark:text-gray-100">
           Create a new account
         </h2>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
+        <div className="bg-white dark:bg-gray-800 px-4 py-8 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit}>
-            {[
-              {
-                label: "Full Name",
-                type: "text",
-                name: "name",
-                icon: <User className="h-5 w-5 text-gray-400" />,
-              },
-              {
-                label: "Email address",
-                type: "email",
-                name: "email",
-                icon: <Mail className="h-5 w-5 text-gray-400" />,
-              },
-              {
-                label: "Password",
-                type: "password",
-                name: "password",
-                icon: <Lock className="h-5 w-5 text-gray-400" />,
-              },
-              {
-                label: "Confirm Password",
-                type: "password",
-                name: "confirmPassword",
-                icon: <Lock className="h-5 w-5 text-gray-400" />,
-              },
+            {[{ label: "Full Name", type: "text", name: "name", icon: <User className="h-5 w-5 text-gray-400" /> },
+              { label: "Email address", type: "email", name: "email", icon: <Mail className="h-5 w-5 text-gray-400" /> },
+              { label: "Password", type: "password", name: "password", icon: <Lock className="h-5 w-5 text-gray-400" /> },
+              { label: "Confirm Password", type: "password", name: "confirmPassword", icon: <Lock className="h-5 w-5 text-gray-400" /> },
             ].map(({ label, type, name, icon }) => (
               <div key={name}>
-                <label
-                  htmlFor={name}
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor={name} className="block text-sm font-medium text-gray-700 dark:text-gray-300">
                   {label}
                 </label>
                 <div className="relative mt-1 rounded-md shadow-sm">
@@ -122,14 +98,10 @@ const Signup = () => {
                     autoComplete={name}
                     value={formData[name]}
                     onChange={handleChange}
-                    className={`block w-full border py-2 pr-3 pl-10 ${
-                      errors[name] ? "border-red-300" : "border-gray-300"
-                    } rounded-md placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none sm:text-sm`}
+                    className={`block w-full border py-2 pr-3 pl-10 ${errors[name] ? "border-red-300 dark:border-red-500" : "border-gray-300 dark:border-gray-600"} rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 focus:outline-none sm:text-sm`}
                   />
                 </div>
-                {errors[name] && (
-                  <p className="mt-2 text-sm text-red-600">{errors[name]}</p>
-                )}
+                {errors[name] && <p className="mt-2 text-sm text-red-600 dark:text-red-400">{errors[name]}</p>}
               </div>
             ))}
 
@@ -137,16 +109,13 @@ const Signup = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none disabled:opacity-50"
+                className="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 dark:bg-indigo-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 dark:hover:bg-indigo-400 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-gray-900 focus:outline-none disabled:opacity-50"
               >
                 {isLoading ? "Creating account..." : "Sign up"}
               </button>
             </div>
-            <p className="mt-2 text-center text-sm text-gray-600">
-              <Link
-                to="/login"
-                className="font-medium text-indigo-600 hover:text-indigo-500"
-              >
+            <p className="mt-2 text-center text-sm text-gray-600 dark:text-gray-400">
+              <Link to="/login" className="font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300">
                 Sign in to your existing account
               </Link>
             </p>
