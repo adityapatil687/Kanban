@@ -127,7 +127,7 @@ const Dashboard = () => {
 
           <div className="mt-8">
             <div className="mb-6 flex flex-col md:flex-row md:items-center md:justify-between">
-              <h2 className="text-lg font-medium text-gray-900">Your Boards</h2>
+              <h2 className="text-lg font-medium dark:text-white text-gray-900">Your Boards</h2>
               <div className="relative mt-4 max-w-xs rounded-md shadow-sm md:mt-0">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <Search className="h-4 w-4 text-gray-400" />
