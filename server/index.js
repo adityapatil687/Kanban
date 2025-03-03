@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 // Load environment variables
-
+dotenv.config();
 
 // Initialize Express app
 const app = express();
