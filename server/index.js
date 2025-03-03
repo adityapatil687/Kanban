@@ -16,7 +16,8 @@ const PORT = process.env.PORT;
 
 // Middleware
 app.use(cors({
-  origin: "https://kaanbaan-1.web.app", // Replace with your Firebase URL
+  // origin: "https://kaanbaan-1.web.app", // Replace with your Firebase URL
+  origin: "*",
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
