@@ -1,5 +1,6 @@
 // API URL - Change this to your actual backend URL in production
-export const API_URL = 'http://localhost:5000';
+// export const API_URL = 'http://localhost:5000';
+export const API_URL = 'https://kanban-0d2n.onrender.com';
 
 // Task Status Options
 export const TASK_STATUSES = {

@@ -56,7 +56,7 @@ const Signup = () => {
     try {
       await register(formData.name, formData.email, formData.password);
       toast.success("Account created successfully!");
-      navigate("/dashboard");
+      navigate("/");
     } catch (error) {
       toast.error("Failed to create account");
     } finally {
