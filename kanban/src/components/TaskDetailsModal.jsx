@@ -91,7 +91,7 @@ const TaskDetailsModal = ({
 
               {task.subtasks.length > 0 && (
                 <div className="mt-6">
-                  <h4 className="text-sm font-medium text-gray-900">
+                  <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100">
                     Subtasks ({completedSubtasks}/{totalSubtasks})
                   </h4>
 
@@ -122,7 +122,7 @@ const TaskDetailsModal = ({
                         </div>
                         <label
                           htmlFor={`subtask-${subtask._id}`}
-                          className={`ml-3 text-sm ${subtask.completed ? "text-gray-400 line-through" : "text-gray-700"}`}
+                          className={`ml-3 text-sm dark:text-gray-100 ${subtask.completed ? "text-gray-400 line-through" : "text-gray-700"}`}
                         >
                           {subtask.title}
                         </label>

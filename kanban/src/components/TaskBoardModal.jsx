@@ -32,7 +32,7 @@ const TaskBoardModal = ({
     <div className="fixed inset-0 z-10 overflow-y-auto">
       <div className="flex min-h-screen items-center justify-center px-4 pt-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity" aria-hidden="true">
-          <div className="absolute inset-0 bg-gray-500 dark:bg-gray-900 opacity-75"></div>
+          <div className="absolute inset-0 bg-gray-500 opacity-75 dark:bg-gray-900"></div>
         </div>
 
         <span
@@ -42,11 +42,11 @@ const TaskBoardModal = ({
           &#8203;
         </span>
 
-        <div className="inline-block transform overflow-hidden rounded-lg bg-white dark:bg-gray-800 px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6 sm:align-middle">
+        <div className="inline-block transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6 sm:align-middle dark:bg-gray-800">
           <div className="absolute top-0 right-0 pt-4 pr-4">
             <button
               type="button"
-              className="rounded-md bg-white dark:bg-gray-800 text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none"
+              className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none dark:bg-gray-800"
               onClick={onClose}
             >
               <span className="sr-only">Close</span>
@@ -72,14 +72,16 @@ const TaskBoardModal = ({
                     <input
                       type="text"
                       id="title"
-                      className={`block w-full rounded-md border-gray-300 dark:border-gray-600 p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200 ${
+                      className={`block w-full rounded-md border border-gray-300 bg-gray-100 p-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200 ${
                         errors.title ? "border-red-300" : ""
                       }`}
                       value={title}
                       onChange={(e) => setTitle(e.target.value)}
                     />
                     {errors.title && (
-                      <p className="mt-2 text-sm text-red-600">{errors.title}</p>
+                      <p className="mt-2 text-sm text-red-600">
+                        {errors.title}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -95,7 +97,7 @@ const TaskBoardModal = ({
                     <textarea
                       id="description"
                       rows={3}
-                      className="block w-full rounded-md border-gray-300 dark:border-gray-600 p-2 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200"
+                      className="block w-full rounded-md border border-gray-300 bg-gray-100 p-2 text-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-gray-200"
                       value={description}
                       onChange={(e) => setDescription(e.target.value)}
                     />
@@ -111,7 +113,7 @@ const TaskBoardModal = ({
                   </button>
                   <button
                     type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white dark:bg-gray-700 px-4 py-2 text-base font-medium text-gray-700 dark:text-gray-200 shadow-sm hover:bg-gray-50 dark:hover:bg-gray-600 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none sm:mt-0 sm:w-auto sm:text-sm"
+                    className="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none sm:mt-0 sm:w-auto sm:text-sm dark:bg-gray-700 dark:text-gray-200 dark:hover:bg-gray-600"
                     onClick={onClose}
                   >
                     Cancel
