@@ -1,6 +1,3 @@
-![Screenshot (5)](https://github.com/user-attachments/assets/086181bc-366b-40ce-9457-df4795197bec)
-<img width="959" alt="Screenshot 2025-03-05 001938" src="https://github.com/user-attachments/assets/0b4235e1-c5db-42a4-bf48-afaa4a532d77" />
-
 # Kanban Task Manager
 
 A simple **Kanban-style task manager** built using **React, Node.js, Express, and MongoDB**.
@@ -9,7 +6,12 @@ A simple **Kanban-style task manager** built using **React, Node.js, Express, an
 
 ✅ Create, update, and delete tasks  
 ✅ Organize tasks by status (To Do, In Progress, Done)   
-✅ Assign priorities and due dates   
+✅ Assign priorities and due dates
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/086181bc-366b-40ce-9457-df4795197bec" width="45%" />
+  <img src="https://github.com/user-attachments/assets/0b4235e1-c5db-42a4-bf48-afaa4a532d77" width="45%" />
+</p>
 
 ## Tech Stack
 
